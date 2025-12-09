@@ -1,31 +1,20 @@
 *** Settings ***
-Documentation         Arquivo contendo as custom keywords utilizadas em todo o
-...                   projeto de automação
-
+Documentation         Main resource file for common keywords and libraries
 Resource            main.resource
 
-Library             String
-Library             Collections
-Library             OperatingSystem
-Library             DateTime
-Library             SeleniumLibrary
-Library             FakerLibrary  locale=pt_BR
-
-
 *** Keywords ***
-
 Login Access
     Input    ${pageHome.inputUser}       standard_user
-    Input    ${pageHome.inputPassword}   secret_sauce
+    Input    ${pageHome.inputPassword}   %{USER_PASSWORD}
     Click    ${pageHome.btnSignin}
-    Wait Until Element Is Visible    ${pageShop.iconCart}    ${TIMEOUT}
+    Wait Until Element Is Visible        ${pageShop.iconCart}    ${TIMEOUT}
 
 Click
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=30
+    Wait Until Element Is Visible  ${element}  ${TIMEOUT}
     Click Element  ${element}
 
 Input
     [Arguments]  ${element}  ${text}
-    Wait Until Element Is Visible  ${element}  timeout=30
+    Wait Until Element Is Visible  ${element}  ${TIMEOUT}
     Input Text   ${element}   ${text}

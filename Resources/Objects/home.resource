@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation    Página com os objetos da página home/login do sistema
-
+Documentation    Page objects from home page
 
 *** Variables ***
 &{pageHome}
