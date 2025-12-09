@@ -12,3 +12,4 @@ six==1.16.0
 urllib3==2.6.1
 wrapt==2.0.1
 qase-robotframework==4.0.7
+python-dotenv==1.2.1
