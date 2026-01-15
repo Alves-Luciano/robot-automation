@@ -3,13 +3,14 @@ Documentation       Automation setup
 Resource            main.resource
 
 *** Variables ***
-${URL}           https://www.saucedemo.com
-${TIMEOUT}       30
-${HEADLESS}      True
-${TEARDOWN}      True
-${FAST_TIMEOUT}  5
-${LONG_TIMEOUT}  60
-${HARD_TIMEOUT}  90
+${URL}                  https://www.saucedemo.com
+${CHROMEDRIVER_PATH}    /usr/local/bin/chromedriver
+${TIMEOUT}              30
+${HEADLESS}             True
+${TEARDOWN}             True
+${FAST_TIMEOUT}         5
+${LONG_TIMEOUT}         60
+${HARD_TIMEOUT}         90
 
 *** Keywords ***
 Open Google Chrome Browser
