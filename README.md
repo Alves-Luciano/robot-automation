@@ -8,7 +8,7 @@ Este projeto serve como aprendizagem para configurar um ambiente robot-framework
 
 ## Instalação
 No Windows:
-- Download Chromedriver: https://chromedriver.chromium.org/downloads
+- Download Chromedriver: https://googlechromelabs.github.io/chrome-for-testing/
 - Download Python Installer: https://www.python.org/downloads/windows/
 - Visual Studio Code: https://code.visualstudio.com/download
 

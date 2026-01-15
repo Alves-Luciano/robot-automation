@@ -1,20 +1,19 @@
 *** Settings ***
-Documentation       Configuração para início da automação
+Documentation       Automation setup
 Resource            main.resource
 
-
 *** Variables ***
-${HEADLESS}  ${HEADLESS}
-${TEARDOWN}  True
-${URL}  https://www.saucedemo.com
-${FAST_TIMEOUT}  5
-${TIMEOUT}  30
-${LONG_TIMEOUT}  60
-${HARD_TIMEOUT}  90
-
+${URL}                  https://www.saucedemo.com
+${CHROMEDRIVER_PATH}    /usr/local/bin/chromedriver
+${TIMEOUT}              30
+${HEADLESS}             True
+${TEARDOWN}             True
+${FAST_TIMEOUT}         5
+${LONG_TIMEOUT}         60
+${HARD_TIMEOUT}         90
 
 *** Keywords ***
-Abrir Navegador
+Open Google Chrome Browser
     ${CHROME_OPTIONS}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method    ${CHROME_OPTIONS}    add_argument    --incognito
     Call Method    ${CHROME_OPTIONS}    add_argument    --disable-notifications
